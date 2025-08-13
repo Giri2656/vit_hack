@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .bg-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gradient min-h-screen">
+    <!-- Navigation -->
+    <nav class="glass-card p-4 mb-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white p-2 rounded-full shadow-lg">
+                    <i class="fas fa-graduation-cap text-2xl text-purple-600"></i>
+                </div>
+                <span class="text-2xl font-bold text-white">AI Tutor</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="text-white hover:text-purple-200 mr-4 font-medium">
+                    <i class="fas fa-sign-in-alt mr-1"></i>Login
+                </a>
+                <a href="signup.html" class="btn-primary text-white px-6 py-2 rounded-lg font-medium">
+                    <i class="fas fa-user-plus mr-1"></i>Sign Up
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 pb-16">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-white mb-4">Welcome to AI Tutor</h1>
+            <p class="text-xl text-purple-100 mb-8">Your intelligent learning companion powered by AI</p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="glass-card p-6 rounded-xl text-center">
+                <i class="fas fa-file-upload text-3xl text-purple-300 mb-3"></i>
+                <h3 class="text-xl font-semibold text-white mb-2">Upload Documents</h3>
+                <p class="text-purple-100">Support for PDF, DOC, PPT, and more</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl text-center">
+                <i class="fas fa-brain text-3xl text-purple-300 mb-3"></i>
+                <h3 class="text-xl font-semibold text-white mb-2">AI-Powered Learning</h3>
+                <p class="text-purple-100">Get instant answers and explanations</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl text-center">
+                <i class="fas fa-chart-line text-3xl text-purple-300 mb-3"></i>
+                <h3 class="text-xl font-semibold text-white mb-2">Track Progress</h3>
+                <p class="text-purple-100">Monitor your learning journey</p>
+            </div>
+        </div>
+
+        <!-- Main Features -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- File Upload Section -->
+            <div class="glass-card p-8 rounded-xl">
+                <h2 class="text-2xl font-bold text-white mb-6">
+                    <i class="fas fa-upload mr-3 text-purple-300"></i>Upload Your Documents
+                </h2>
+                <div class="border-2 border-dashed border-purple-300 p-8 rounded-lg text-center mb-6">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-purple-300 mb-4"></i>
+                    <p class="text-white mb-2">Drag and drop your files here</p>
+                    <p class="text-purple-100 text-sm">or</p>
+                    <button class="btn-primary text-white px-6 py-2 rounded-lg mt-4">
+                        <i class="fas fa-folder-open mr-2"></i>Browse Files
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Section -->
+            <div class="glass-card p-8 rounded-xl">
+                <h2 class="text-2xl font-bold text-white mb-6">
+                    <i class="fas fa-comments mr-3 text-purple-300"></i>Ask Questions
+                </h2>
+                <div class="mb-6">
+                    <textarea placeholder="Ask anything about your uploaded documents..." 
+                              class="w-full p-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder-purple-200 resize-none"
+                              rows="4"></textarea>
+                </div>
+                <button class="btn-primary text-white px-6 py-3 rounded-lg w-full">
+                    <i class="fas fa-paper-plane mr-2"></i>Ask Question
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="chat.html" class="glass-card p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all">
+                <i class="fas fa-comments text-3xl text-purple-300 mb-3"></i>
+                <h3 class="text-lg font-semibold text-white mb-2">Chat with AI</h3>
+                <p class="text-purple-100 text-sm">Interactive conversations</p>
+            </a>
+            <a href="explain.html" class="glass-card p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all">
+                <i class="fas fa-lightbulb text-3xl text-purple-300 mb-3"></i>
+                <h3 class="text-lg font-semibold text-white mb-2">Get Explanations</h3>
+                <p class="text-purple-100 text-sm">Detailed breakdowns</p>
+            </a>
+            <a href="quiz.html" class="glass-card p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all">
+                <i class="fas fa-question-circle text-3xl text-purple-300 mb-3"></i>
+                <h3 class="text-lg font-semibold text-white mb-2">Take Quizzes</h3>
+                <p class="text-purple-100 text-sm">Test your knowledge</p>
+            </a>
+            <a href="resource.html" class="glass-card p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all">
+                <i class="fas fa-book text-3xl text-purple-300 mb-3"></i>
+                <h3 class="text-lg font-semibold text-white mb-2">Find Resources</h3>
+                <p class="text-purple-100 text-sm">Additional materials</p>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card p-8 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-center space-x-8 mb-4">
+                <a href="about.html" class="text-white hover:text-purple-200">About</a>
+                <a href="#" class="text-white hover:text-purple-200">Privacy</a>
+                <a href="#" class="text-white hover:text-purple-200">Terms</a>
+                <a href="#" class="text-white hover:text-purple-200">Contact</a>
+            </div>
+            <p class="text-white">&copy; 2024 AI Tutor Platform. Built with FastAPI.</p>
+        </div>
+    </footer>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8001';
+        
+        // Basic functionality for file upload and questions
+        // This would be expanded with actual API calls
+    </script>
+</body>
+</html>
